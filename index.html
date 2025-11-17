@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec Animation</title>
+    <style>
+        /* Style général de la page */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            font-family: 'Arial', sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Animation du titre */
+        h1 {
+            font-size: 3em;
+            margin-bottom: 50px;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Carré animé */
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: #ffdd59;
+            border-radius: 20px;
+            animation: moveSquare 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes moveSquare {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                background-color: #ffdd59;
+            }
+            50% {
+                transform: translateY(-150px) rotate(180deg);
+                background-color: #ff6b81;
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+                background-color: #1dd1a1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur ma page animée !</h1>
+    <div class="square"></div>
+</body>
+</html>
